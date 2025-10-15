@@ -57,24 +57,50 @@ class MainTest {
         @Test
         void checkForUpperCase(){
             //Given
-            String password = "HalloWelt";
+            String password = "EinszweiDrei";
             //When
             boolean actual = Main.checkForUpperCase(password);
             //Then
             assertTrue(actual);
         }
 
-
-    void checkForBigLettersFalse(){
-        //Given
-        String password = "hallowelt";
-        //When
-        boolean actual = Main.checkForUpperCase(password);
-        //Then
-        assertFalse(actual);
+        @Test
+        void checkForBigLettersFalse(){
+            //Given
+            String password = "keinegroßenbuchstabenimpasswort";
+            //When
+            boolean actual = Main.checkForUpperCase(password);
+            //Then
+            assertFalse(actual);
     }
 
 
+        @Test
+        void checkForLowerCase(){
+            //Given
+            String password ="Galloweltklinespasswort675";
+
+            //When
+            boolean actual = Main.checkForLowerCase(password);
+
+            //Then
+
+            assertTrue(actual);
+
+
+        }
+        @Test
+        void checkForLowerCaseFalse() {
+            //Given
+            String password = "ALL879";
+
+            //When
+            boolean actual = Main.checkForLowerCase(password);
+
+            //Then
+
+            assertFalse(actual);
+        }
 
 
 

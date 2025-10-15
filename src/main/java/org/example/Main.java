@@ -18,6 +18,8 @@ public class Main {
         System.out.println(test);
         boolean upper = checkForUpperCase(password);
         System.out.println(upper);
+        boolean lower = checkForLowerCase("KLEIN");
+        System.out.println(lower);
 
 
 
@@ -67,7 +69,20 @@ public class Main {
         }
         return status;
      }
+     public static boolean checkForLowerCase(String password){
+        boolean status = false;
+        for(int i = 0;i <password.length();i++){
+            char a =password.charAt(i);
+            System.out.println("außen"+ a);
+            if(Character.isLowerCase(a)){
+                System.out.println("außen"+ a);
+                status = true;
+            }
+
+        }
 
 
+        return status;
+     }
 
     }
