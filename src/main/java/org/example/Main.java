@@ -6,6 +6,8 @@ public class Main {
     static String password = "test7passwort";
     static int minPasswordLength = 8;
     static int[] digits = {0,1,2,3,4,5,6,7,8,9};
+    static String[] blacklist = {"hallo", "halloWelt"};
+
 
 
 
@@ -82,6 +84,16 @@ public class Main {
         }
 
 
+        return status;
+     }
+
+     public static boolean checkBlacklist(String password){
+        boolean status = true;
+        for(int i =0; i<blacklist.length; i++){
+            if(blacklist[i].toLowerCase().equals(password)){
+               status = false;
+            }
+        }
         return status;
      }
 

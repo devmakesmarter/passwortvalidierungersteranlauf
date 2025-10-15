@@ -102,6 +102,37 @@ class MainTest {
             assertFalse(actual);
         }
 
+        @Test
+        void checkBlacklist(){
+            //Given
+            String password = "hallo789";
+
+            //When
+
+            boolean actual = Main.checkBlacklist(password);
+
+            // Then
+
+            assertTrue(actual);
+
+        }
+
+        @Test
+        void checkBlacklistFalse(){
+            //Given
+            String password = "hallo";
+
+            //When
+
+            boolean actual = Main.checkBlacklist(password);
+
+            //Then
+
+            assertFalse(actual);
+
+
+
+        }
 
 
 }
