@@ -5,6 +5,15 @@ package org.example;
 public class Main {
     public static void main(String[] args) {
         System.out.println("dasPasswortWirdValidiert");
+        String password = "hahaah";
+        ersteMethode(password);
 
         }
+
+
+     public static void ersteMethode(String password){
+        System.out.println(password);
+
+     }
+
     }
